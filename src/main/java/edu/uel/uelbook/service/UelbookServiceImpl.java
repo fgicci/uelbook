@@ -24,7 +24,7 @@ public class UelbookServiceImpl implements UelbookService {
     @Override
     public Person addPerson(String code, String firstName, String surname) throws PersonExistsException {
         Person person = new Person(code, firstName, surname, null);
-        if (data.containsKey(code)) throw new PersonExistsException("Person exists!");
+        if (data.containsKey(code)) throw new PersonExistsException("Person exists! Code: " + code);
         return data.put(code, person);
     }
 
@@ -45,7 +45,7 @@ public class UelbookServiceImpl implements UelbookService {
     }
 
     private Person findPerson(String code) throws NoSuchCodeException {
-        if (!data.containsKey(code)) throw new NoSuchCodeException("Person does not exists! Code:" + code);
+        if (!data.containsKey(code)) throw new NoSuchCodeException("Person does not exists! Code: " + code);
         return data.get(code);
     }
 
