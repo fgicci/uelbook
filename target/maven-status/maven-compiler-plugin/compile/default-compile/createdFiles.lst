@@ -1,0 +1,6 @@
+edu/uel/uelbook/app/UelbookApp.class
+edu/uel/uelbook/exception/NoSuchCodeException.class
+edu/uel/uelbook/model/Person.class
+edu/uel/uelbook/service/UelbookServiceImpl.class
+edu/uel/uelbook/exception/PersonExistsException.class
+edu/uel/uelbook/service/UelbookService.class
